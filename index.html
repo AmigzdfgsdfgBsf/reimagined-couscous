@@ -1,18 +1,179 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fff"><meta name="description" content="ThumbDrop Pro — YouTube thumbnail downloader with direct downloads and enhanced 4K export"><title>ThumbDrop Pro — YouTube Thumbnail Downloader</title><style>
-:root{--ink:#111216;--muted:#687181;--line:#e7e9ed;--soft:#f6f7f9;--red:#ff3045;--shadow:0 24px 70px rgba(17,18,22,.09)}*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}.nav{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:20px}.mark{width:38px;height:38px;border-radius:11px;background:#111;display:grid;place-items:center}.mark:after{content:"";border-left:12px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}.pill{font-size:12px;font-weight:800;color:#4d5663;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:9px 12px}.hero{text-align:center;padding:74px 0 38px}.ey{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#4b5360;padding:8px 11px;border:1px solid var(--line);background:#fbfbfc;border-radius:999px}.dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px #ff304510}h1{font-size:clamp(44px,7vw,84px);letter-spacing:-.065em;line-height:.94;margin:22px 0 18px}h1 span{color:var(--red)}.lead{max-width:730px;margin:auto;color:var(--muted);font-size:18px;line-height:1.65}.search{max-width:900px;margin:34px auto 0;padding:10px;border:1px solid #dfe2e7;border-radius:18px;box-shadow:var(--shadow)}.row{display:flex;gap:9px}.input{min-width:0;flex:1;border:0;background:var(--soft);border-radius:12px;height:58px;padding:0 16px;outline:0;font-size:15px;color:#111}.go{height:58px;border:0;border-radius:12px;background:#111;color:#fff;font-weight:850;padding:0 25px;cursor:pointer}.go:hover{background:#2b2d31}.hint{padding:10px 3px 2px;display:flex;justify-content:space-between;color:#8b94a2;font-size:11px}.work{display:none;grid-template-columns:minmax(0,1.45fr) minmax(305px,.75fr);gap:18px;text-align:left;margin:24px auto 0;max-width:1040px}.work.show{display:grid}.card{border:1px solid var(--line);border-radius:20px;background:#fff;overflow:hidden;box-shadow:0 15px 45px rgba(22,26,33,.055)}.head{height:52px;padding:0 15px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);font-size:12px;color:#6d7786}.preview{min-height:320px;background:#f2f3f5;display:grid;place-items:center}.preview img{max-width:100%;display:block;height:auto}.empty{color:#8e97a5;font-size:13px;padding:56px;text-align:center}.panel{padding:20px}.panel h2{margin:0 0 4px;font-size:20px}.panel p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}.status{margin:14px 0;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--soft);font-size:12px;color:#606a79}.status.ok{background:#effaf4;border-color:#cce9d8;color:#187046}.status.err{background:#fff1f2;border-color:#ffd0d5;color:#9d1e2b}.status.busy{background:#fff8e9;border-color:#f4dfa9;color:#8b650d}.opts{display:grid;gap:9px}.opt{width:100%;border:1px solid #e1e4e9;background:#fff;border-radius:13px;padding:13px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px;text-align:left;cursor:pointer}.opt:hover{border-color:#bdc4ce;background:#fafbfc}.opt:disabled{opacity:.5;cursor:not-allowed}.opt b{display:block;font-size:13px}.opt small{display:block;margin-top:4px;color:#7d8794;font-size:11px}.tag{font-size:10px;font-weight:900;padding:6px 8px;border-radius:999px;background:var(--soft);color:#515a68}.tag.red{background:#fff0f2;color:#be2032}.note{margin-top:11px;color:#7a8492;font-size:11px;line-height:1.55}.steps{padding:22px 0 70px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{padding:20px;border:1px solid var(--line);border-radius:18px;background:#fafbfc}.n{font-size:11px;font-weight:900;color:#9aa2ae}.step h3{font-size:15px;margin:8px 0 6px}.step p{font-size:12px;color:var(--muted);line-height:1.6;margin:0}footer{border-top:1px solid var(--line);padding:20px 0;color:#818b99;font-size:11px}.foot{display:flex;justify-content:space-between;gap:12px}@media(max-width:840px){.work{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}@media(max-width:620px){.nav{height:68px}.pill{display:none}.hero{padding-top:52px}.row{flex-direction:column}.go{width:100%}.hint,.foot{flex-direction:column;gap:5px}}
-</style></head><body><header class="wrap nav"><div class="brand"><span class="mark"></span><span>ThumbDrop Pro</span></div><span class="pill">Free • No signup</span></header><main><section class="wrap hero"><div class="ey"><span class="dot"></span>YouTube thumbnail downloader</div><h1>Download any thumbnail.<br><span>Up to 4K.</span></h1><p class="lead">Paste a YouTube video URL, preview the best available source, download it directly, or export an enhanced 4K version.</p><div class="search"><div class="row"><input id="url" class="input" placeholder="Paste YouTube video URL here..." autocomplete="off" spellcheck="false"><button id="go" class="go">Get Thumbnail</button></div><div class="hint"><span>YouTube • Shorts • Live • youtu.be • embeds</span><span>Direct download • No upload</span></div></div><section id="work" class="work"><div class="card"><div class="head"><span>Thumbnail preview</span><span id="res">—</span></div><div id="preview" class="preview"><div class="empty">Your thumbnail preview will appear here.</div></div></div><aside class="card panel"><h2>Download</h2><p>Choose a source quality or create an enhanced 4K export.</p><div id="status" class="status">Waiting for a YouTube URL.</div><div class="opts"><button class="opt" data-a="native" data-q="maxresdefault"><div><b>HD / Max source</b><small id="srcInfo">Checking availability…</small></div><span class="tag">SOURCE</span></button><button class="opt" data-a="native" data-q="sddefault"><div><b>SD</b><small>640 × 480 class</small></div><span class="tag">JPG</span></button><button class="opt" data-a="native" data-q="hqdefault"><div><b>High Quality</b><small>480 × 360 class</small></div><span class="tag">JPG</span></button><button class="opt" data-a="native" data-q="mqdefault"><div><b>Medium</b><small>320 × 180 class</small></div><span class="tag">JPG</span></button><button class="opt" data-a="enhance" data-q="4k"><div><b>Enhanced 4K</b><small>3840 × 2160 • upscale + sharpen</small></div><span class="tag red">4K</span></button></div><div class="note">Enhanced 4K is a browser upscale to 3840×2160 with sharpening. It does not invent missing original 4K detail.</div></aside></section></section><section class="wrap steps"><div class="grid"><div class="step"><span class="n">01</span><h3>Paste your link</h3><p>Supports standard YouTube URLs, youtu.be, Shorts, Live, embeds and direct 11-character video IDs.</p></div><div class="step"><span class="n">02</span><h3>Check the source</h3><p>The tool tests standard YouTube thumbnail endpoints and uses the highest responding source.</p></div><div class="step"><span class="n">03</span><h3>Download instantly</h3><p>Buttons fetch the image as a Blob and trigger a browser download instead of navigating to the image URL.</p></div></div></section></main><footer><div class="wrap foot"><span>ThumbDrop Pro</span><span>Use thumbnails in accordance with applicable rights and YouTube's terms.</span></div></footer><script>
-const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],input=$('#url'),go=$('#go'),work=$('#work'),preview=$('#preview'),status=$('#status'),res=$('#res');let id='';
-const yt=(q)=>'https://i.ytimg.com/vi/'+encodeURIComponent(id)+'/'+q+'.jpg';
-const proxy=(u)=>'https://wsrv.nl/?url='+encodeURIComponent(u)+'&output=jpg&default=1';
-function parse(v){v=v.trim();if(/^[A-Za-z0-9_-]{11}$/.test(v))return v;try{const u=new URL(v),h=u.hostname.replace(/^www\./,'').toLowerCase(),p=u.pathname.split('/').filter(Boolean);if(h==='youtu.be')return p[0]||'';if(h.endsWith('youtube.com')){if(u.searchParams.get('v'))return u.searchParams.get('v');let k=['shorts','embed','live'].indexOf(p[0]);if(k>=0)return p[k+1]||''}}catch{}return''}
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff">
+<title>ThumbDrop Pro — YouTube Thumbnail Downloader</title>
+<style>
+:root{--ink:#111216;--muted:#687181;--line:#e7e9ed;--soft:#f6f7f9;--red:#ff3045;--shadow:0 24px 70px rgba(17,18,22,.09)}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+.nav{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:20px}.mark{width:38px;height:38px;border-radius:11px;background:#111;display:grid;place-items:center}.mark:after{content:"";border-left:12px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}.pill{font-size:12px;font-weight:800;color:#4d5663;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:9px 12px}
+.hero{text-align:center;padding:74px 0 38px}.ey{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#4b5360;padding:8px 11px;border:1px solid var(--line);background:#fbfbfc;border-radius:999px}.dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px #ff304510}h1{font-size:clamp(44px,7vw,84px);letter-spacing:-.065em;line-height:.94;margin:22px 0 18px}h1 span{color:var(--red)}.lead{max-width:750px;margin:auto;color:var(--muted);font-size:18px;line-height:1.65}
+.search{max-width:930px;margin:34px auto 0;padding:10px;border:1px solid #dfe2e7;border-radius:18px;box-shadow:var(--shadow)}.row{display:flex;gap:9px}.input{min-width:0;flex:1;border:0;background:var(--soft);border-radius:12px;height:58px;padding:0 16px;outline:0;font-size:15px;color:#111}.go{height:58px;border:0;border-radius:12px;background:#111;color:#fff;font-weight:850;padding:0 25px;cursor:pointer}.go:hover{background:#2b2d31}.hint{padding:10px 3px 2px;display:flex;justify-content:space-between;color:#8b94a2;font-size:11px}
+.work{display:none;grid-template-columns:minmax(0,1.45fr) minmax(305px,.75fr);gap:18px;text-align:left;margin:24px auto 0;max-width:1040px}.work.show{display:grid}.card{border:1px solid var(--line);border-radius:20px;background:#fff;overflow:hidden;box-shadow:0 15px 45px rgba(22,26,33,.055)}.head{height:52px;padding:0 15px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);font-size:12px;color:#6d7786}.preview{min-height:320px;background:#f2f3f5;display:grid;place-items:center}.preview img{max-width:100%;display:block;height:auto}.empty{color:#8e97a5;font-size:13px;padding:56px;text-align:center}.panel{padding:20px}.panel h2{margin:0 0 4px;font-size:20px}.panel p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}.status{margin:14px 0;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--soft);font-size:12px;color:#606a79}.status.ok{background:#effaf4;border-color:#cce9d8;color:#187046}.status.err{background:#fff1f2;border-color:#ffd0d5;color:#9d1e2b}.status.busy{background:#fff8e9;border-color:#f4dfa9;color:#8b650d}.opts{display:grid;gap:9px}.opt{width:100%;border:1px solid #e1e4e9;background:#fff;border-radius:13px;padding:13px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px;text-align:left;cursor:pointer}.opt:hover{border-color:#bdc4ce;background:#fafbfc}.opt:disabled{opacity:.5;cursor:not-allowed}.opt b{display:block;font-size:13px}.opt small{display:block;margin-top:4px;color:#7d8794;font-size:11px}.tag{font-size:10px;font-weight:900;padding:6px 8px;border-radius:999px;background:var(--soft);color:#515a68}.tag.red{background:#fff0f2;color:#be2032}.note{margin-top:11px;color:#7a8492;font-size:11px;line-height:1.55}.steps{padding:22px 0 70px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{padding:20px;border:1px solid var(--line);border-radius:18px;background:#fafbfc}.n{font-size:11px;font-weight:900;color:#9aa2ae}.step h3{font-size:15px;margin:8px 0 6px}.step p{font-size:12px;color:var(--muted);line-height:1.6;margin:0}
+footer{border-top:1px solid var(--line);padding:20px 0;color:#818b99;font-size:11px}.foot{display:flex;justify-content:space-between;gap:12px}
+@media(max-width:840px){.work{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}@media(max-width:620px){.nav{height:68px}.pill{display:none}.hero{padding-top:52px}.row{flex-direction:column}.go{width:100%}.hint,.foot{flex-direction:column;gap:5px}}
+</style></head>
+<body>
+<header class="wrap nav"><div class="brand"><span class="mark"></span><span>ThumbDrop Pro</span></div><span class="pill">Free • No signup</span></header>
+<main><section class="wrap hero">
+<div class="ey"><span class="dot"></span>YouTube thumbnail downloader</div>
+<h1>Download any thumbnail.<br><span>Up to 4K.</span></h1>
+<p class="lead">Paste almost any YouTube video link — including watch, short, Shorts, Live, embed, mobile, music, no-cookie, legacy and encoded redirect forms.</p>
+<div class="search"><div class="row"><input id="url" class="input" placeholder="Paste any YouTube link here..." autocomplete="off" spellcheck="false"><button id="go" class="go">Get Thumbnail</button></div>
+<div class="hint"><span>watch • youtu.be • shorts • live • embed • music • mobile • legacy</span><span>Direct download • No upload</span></div></div>
+
+<section id="work" class="work">
+<div class="card"><div class="head"><span>Thumbnail preview</span><span id="res">—</span></div><div id="preview" class="preview"><div class="empty">Your thumbnail preview will appear here.</div></div></div>
+<aside class="card panel"><h2>Download</h2><p>Choose the best available source or generate an enhanced 4K export.</p><div id="status" class="status">Waiting for a YouTube URL.</div>
+<div class="opts">
+<button class="opt" data-a="native" data-q="maxresdefault"><div><b>HD / Max source</b><small id="srcInfo">Checking availability…</small></div><span class="tag">SOURCE</span></button>
+<button class="opt" data-a="native" data-q="sddefault"><div><b>SD</b><small>640 × 480 class</small></div><span class="tag">JPG</span></button>
+<button class="opt" data-a="native" data-q="hqdefault"><div><b>High Quality</b><small>480 × 360 class</small></div><span class="tag">JPG</span></button>
+<button class="opt" data-a="native" data-q="mqdefault"><div><b>Medium</b><small>320 × 180 class</small></div><span class="tag">JPG</span></button>
+<button class="opt" data-a="enhance"><div><b>Enhanced 4K</b><small>3840 × 2160 • upscale + sharpen</small></div><span class="tag red">4K</span></button>
+</div>
+<div class="note">Playlist/channel/search pages do not contain one unique video thumbnail. For a video URL with extra playlist parameters, the video ID is extracted correctly.</div>
+</aside></section></section>
+<section class="wrap steps"><div class="grid">
+<div class="step"><span class="n">01</span><h3>Paste any video link</h3><p>Handles standard, short, Shorts, Live, embed, music, mobile, no-cookie, legacy and encoded YouTube video URLs.</p></div>
+<div class="step"><span class="n">02</span><h3>Detect the video ID</h3><p>The parser checks canonical query parameters, path formats, nested URLs and URL-encoded redirect parameters before accepting an ID.</p></div>
+<div class="step"><span class="n">03</span><h3>Download or enhance</h3><p>Native options download the source image; Enhanced 4K exports a 3840×2160 JPEG in the browser.</p></div>
+</div></section></main>
+<footer><div class="wrap foot"><span>ThumbDrop Pro</span><span>Use thumbnails in accordance with applicable rights and YouTube's terms.</span></div></footer>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const input=$('#url'),go=$('#go'),work=$('#work'),preview=$('#preview'),status=$('#status'),res=$('#res'),srcInfo=$('#srcInfo'); let id='';
+
+const VIDEO_ID=/^[A-Za-z0-9_-]{11}$/;
+const HOSTS=new Set(['youtube.com','m.youtube.com','music.youtube.com','www.youtube.com','gaming.youtube.com','youtu.be','www.youtu.be','youtube-nocookie.com','www.youtube-nocookie.com']);
+
+function cleanCandidate(v){
+  if(!v)return '';
+  try{v=decodeURIComponent(v)}catch{}
+  v=v.trim();
+  const m=v.match(VIDEO_ID); if(m)return m[0];
+  const many=v.match(/[A-Za-z0-9_-]{11}/g);
+  return many && many.length===1 ? many[0] : '';
+}
+
+function parseYouTubeId(raw,depth=0){
+  if(depth>5||!raw)return '';
+  raw=raw.trim();
+  const direct=cleanCandidate(raw); if(direct)return direct;
+
+  // Accept strings that have been HTML/URL encoded.
+  try{const once=decodeURIComponent(raw); if(once!==raw){const d=cleanCandidate(once);if(d)return d;raw=once}}catch{}
+
+  let u;
+  try{u=new URL(raw)}catch{
+    try{u=new URL('https://youtube.com/'+raw.replace(/^[/]+/,''))}catch{return ''}
+  }
+
+  const host=u.hostname.replace(/^www\./,'').toLowerCase();
+  const path=u.pathname.split('/').filter(Boolean);
+
+  // Canonical video parameter; works with watch?v=..., playlist-linked videos, etc.
+  for(const key of ['v','video_id','videoId']){
+    const d=cleanCandidate(u.searchParams.get(key)||''); if(d)return d;
+  }
+
+  // Standard host/path formats.
+  if(host==='youtu.be'||host==='www.youtu.be') return cleanCandidate(path[0]||'');
+  if(HOSTS.has(host)||host.endsWith('.youtube.com')){
+    const known=['shorts','embed','live','v'];
+    const idx=known.indexOf((path[0]||'').toLowerCase());
+    if(idx>=0){const d=cleanCandidate(path[1]||'');if(d)return d}
+    // Some legacy /watch/VIDEO forms.
+    if((path[0]||'').toLowerCase()==='watch' && path[1]){const d=cleanCandidate(path[1]);if(d)return d}
+  }
+
+  // attribution_link / redirect / other wrappers can contain another YouTube URL.
+  for(const key of ['u','url','q','redirect','target','continue']){
+    const nested=u.searchParams.get(key);
+    if(nested){
+      const d=parseYouTubeId(nested,depth+1);
+      if(d)return d;
+    }
+  }
+
+  // Fragment may carry a nested watch URL or an 11-char v parameter.
+  const hash=u.hash.replace(/^#/,'');
+  if(hash){
+    const d=parseYouTubeId(hash,depth+1); if(d)return d;
+    try{
+      const hp=new URLSearchParams(hash);
+      for(const key of ['v','u','url']){const q=hp.get(key);if(q){const x=parseYouTubeId(q,depth+1);if(x)return x}}
+    }catch{}
+  }
+
+  // Last-resort: extract a uniquely occurring 11-char token from a trusted YouTube URL.
+  if(HOSTS.has(host)||host.endsWith('.youtube.com')){
+    const textParts=[u.pathname,u.search,u.hash];
+    const found=[];
+    for(const s of textParts) for(const m of s.matchAll(/[A-Za-z0-9_-]{11}/g)) found.push(m[0]);
+    const unique=[...new Set(found)];
+    if(unique.length===1)return unique[0];
+  }
+  return '';
+}
+
+const yt=q=>'https://i.ytimg.com/vi/'+encodeURIComponent(id)+'/'+q+'.jpg';
+const proxy=u=>'https://wsrv.nl/?url='+encodeURIComponent(u)+'&output=jpg&default=1';
+
 function st(t,c=''){status.textContent=t;status.className='status'+(c?' '+c:'')}
 function lock(v){$$('.opt').forEach(b=>b.disabled=v)}
-async function fetchImage(src){let last;for(const u of [proxy(src),src]){try{const r=await fetch(u,{mode:'cors',cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const b=await r.blob();if(!b.type.startsWith('image/'))throw Error('Not image');return b}catch(e){last=e}}throw last||Error('Download failed')}
+async function fetchImage(src){
+  let last;
+  for(const u of [proxy(src),src]){
+    try{const r=await fetch(u,{mode:'cors',cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const b=await r.blob();if(!b.type.startsWith('image/'))throw Error('Not image');return b}catch(e){last=e}
+  }
+  throw last||Error('Download failed')
+}
 function imgBlob(b){return new Promise((ok,bad)=>{const i=new Image(),u=URL.createObjectURL(b);i.onload=()=>{URL.revokeObjectURL(u);ok(i)};i.onerror=()=>{URL.revokeObjectURL(u);bad(Error('Invalid image'))};i.src=u})}
-function save(b,name){const u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=name;a.style.display='none';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1200)}
+function save(b,name){const u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=name;a.style.display='none';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1500)}
+
 async function native(q){st('Preparing '+q+' download…','busy');const b=await fetchImage(yt(q));save(b,'youtube-thumbnail-'+id+'-'+q+'.jpg');st('Downloaded successfully.','ok')}
-async function enhance(){st('Downloading source for 4K enhancement…','busy');const b=await fetchImage(yt('maxresdefault')),i=await imgBlob(b),W=3840,H=2160,c=document.createElement('canvas');c.width=W;c.height=H;const x=c.getContext('2d',{alpha:false});x.imageSmoothingEnabled=true;x.imageSmoothingQuality='high';const sr=i.naturalWidth/i.naturalHeight,tr=W/H;let sw=i.naturalWidth,sh=i.naturalHeight,sx=0,sy=0;if(sr>tr){sw=Math.round(i.naturalHeight*tr);sx=Math.round((i.naturalWidth-sw)/2)}else if(sr<tr){sh=Math.round(i.naturalWidth/tr);sy=Math.round((i.naturalHeight-sh)/2)}x.drawImage(i,sx,sy,sw,sh,0,0,W,H);const d=x.getImageData(0,0,W,H),o=x.createImageData(W,H),s=d.data,z=o.data,str=W*4,amt=.32;for(let y=1;y<H-1;y++)for(let x0=1;x0<W-1;x0++){const p=y*str+x0*4,lr=(s[p-4]+s[p+4]+s[p-str]+s[p+str])/4,lg=(s[p-3]+s[p+5]+s[p-str+1]+s[p+str+1])/4,lb=(s[p-2]+s[p+6]+s[p-str+2]+s[p+str+2])/4;z[p]=Math.max(0,Math.min(255,s[p]+(s[p]-lr)*amt));z[p+1]=Math.max(0,Math.min(255,s[p+1]+(s[p+1]-lg)*amt));z[p+2]=Math.max(0,Math.min(255,s[p+2]+(s[p+2]-lb)*amt));z[p+3]=255}x.putImageData(o,0,0);st('Encoding 4K JPEG…','busy');const out=await new Promise((ok,bad)=>c.toBlob(v=>v?ok(v):bad(Error('Encoding failed')),'image/jpeg',.94));save(out,'youtube-thumbnail-'+id+'-enhanced-4k.jpg');st('Enhanced 4K downloaded — 3840×2160.','ok')}
-async function previewBest(){st('Checking available thumbnail…','busy');for(const q of ['maxresdefault','sddefault','hqdefault','mqdefault','default']){const i=new Image();i.onload=()=>{preview.innerHTML='';preview.appendChild(i);res.textContent=i.naturalWidth+' × '+i.naturalHeight;$('#srcInfo').textContent=i.naturalWidth+' × '+i.naturalHeight+' available';st('Thumbnail ready.','ok')};i.onerror=()=>{};i.src=yt(q)+'?v='+Date.now();await new Promise(r=>setTimeout(r,120))}}
-async function extract(){id=parse(input.value);work.classList.add('show');if(!id){preview.innerHTML='<div class="empty">Please paste a valid YouTube video URL or video ID.</div>';res.textContent='—';st('Invalid YouTube URL.','err');return}await previewBest();history.replaceState(null,'',location.pathname+'?v='+encodeURIComponent(id))}
-go.onclick=extract;input.onkeydown=e=>{if(e.key==='Enter')extract()};$$('.opt').forEach(b=>b.onclick=async()=>{if(!id){await extract();if(!id)return}lock(true);try{b.dataset.a==='enhance'?await enhance():await native(b.dataset.q)}catch(e){console.error(e);st('Download failed. Try again or another size.','err')}finally{lock(false)}});const initial=new URLSearchParams(location.search).get('v');if(initial){input.value='https://youtu.be/'+initial;extract()}
+async function enhance(){
+  st('Downloading source for 4K enhancement…','busy');
+  const b=await fetchImage(yt('maxresdefault')),i=await imgBlob(b),W=3840,H=2160,c=document.createElement('canvas');
+  c.width=W;c.height=H;const x=c.getContext('2d',{alpha:false});x.imageSmoothingEnabled=true;x.imageSmoothingQuality='high';
+  const sr=i.naturalWidth/i.naturalHeight,tr=W/H;let sw=i.naturalWidth,sh=i.naturalHeight,sx=0,sy=0;
+  if(sr>tr){sw=Math.round(i.naturalHeight*tr);sx=Math.round((i.naturalWidth-sw)/2)}
+  else if(sr<tr){sh=Math.round(i.naturalWidth/tr);sy=Math.round((i.naturalHeight-sh)/2)}
+  x.drawImage(i,sx,sy,sw,sh,0,0,W,H);
+  const d=x.getImageData(0,0,W,H),o=x.createImageData(W,H),s=d.data,z=o.data,str=W*4,amt=.30;
+  for(let y=1;y<H-1;y++)for(let xx=1;xx<W-1;xx++){const p=y*str+xx*4,lr=(s[p-4]+s[p+4]+s[p-str]+s[p+str])/4,lg=(s[p-3]+s[p+5]+s[p-str+1]+s[p+str+1])/4,lb=(s[p-2]+s[p+6]+s[p-str+2]+s[p+str+2])/4;z[p]=Math.max(0,Math.min(255,s[p]+(s[p]-lr)*amt));z[p+1]=Math.max(0,Math.min(255,s[p+1]+(s[p+1]-lg)*amt));z[p+2]=Math.max(0,Math.min(255,s[p+2]+(s[p+2]-lb)*amt));z[p+3]=255}
+  x.putImageData(o,0,0);st('Encoding 4K JPEG…','busy');
+  const out=await new Promise((ok,bad)=>c.toBlob(v=>v?ok(v):bad(Error('Encoding failed')),'image/jpeg',.94));
+  save(out,'youtube-thumbnail-'+id+'-enhanced-4k.jpg');st('Enhanced 4K downloaded — 3840×2160.','ok')
+}
+async function previewBest(){
+  st('Checking available thumbnail…','busy');
+  let displayed=false;
+  for(const q of ['maxresdefault','sddefault','hqdefault','mqdefault','default']){
+    const i=new Image();
+    i.onload=()=>{if(displayed)return;displayed=true;preview.innerHTML='';preview.appendChild(i);res.textContent=i.naturalWidth+' × '+i.naturalHeight;srcInfo.textContent=i.naturalWidth+' × '+i.naturalHeight+' available';st('Thumbnail ready.','ok')};
+    i.onerror=()=>{};
+    i.src=yt(q)+'?v='+Date.now();
+    await new Promise(r=>setTimeout(r,120))
+  }
+  if(!displayed)st('No thumbnail could be loaded for this video.','err')
+}
+async function extract(){
+  id=parseYouTubeId(input.value);
+  work.classList.add('show');
+  if(!id){preview.innerHTML='<div class="empty">This link does not contain a recognizable single YouTube video ID. Playlist, channel, search and home links need a specific video link.</div>';res.textContent='—';st('Unsupported or incomplete YouTube link.','err');return}
+  await previewBest();
+  history.replaceState(null,'',location.pathname+'?v='+encodeURIComponent(id))
+}
+go.onclick=extract;input.onkeydown=e=>{if(e.key==='Enter')extract()};
+$$('.opt').forEach(b=>b.onclick=async()=>{
+  if(!id){await extract();if(!id)return}
+  lock(true);
+  try{b.dataset.a==='enhance'?await enhance():await native(b.dataset.q)}
+  catch(e){console.error(e);st('Download failed. Try again or choose another source size.','err')}
+  finally{lock(false)}
+});
+const initial=new URLSearchParams(location.search).get('v');if(initial){input.value='https://youtu.be/'+initial;extract()}
 </script></body></html>
