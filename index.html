@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b10">
+<meta name="description" content="ThumbDrop — fast YouTube thumbnail downloader">
+<title>ThumbDrop — YouTube Thumbnail Downloader</title>
+<style>
+:root{--bg:#07090d;--card:#0e1219;--line:#202733;--text:#f7f8fb;--muted:#9aa4b4;--red:#ff3045;--red2:#ff6575}
+*{box-sizing:border-box}body{margin:0;color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(900px 460px at 50% -10%,#3d1018 0,transparent 62%),var(--bg)}
+.wrap{width:min(1080px,calc(100% - 32px));margin:auto}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:11px;align-items:center;font-weight:850;font-size:18px}.logo{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,#351018,#13090c);border:1px solid #4a222a}.logo:after{content:"";border-left:11px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}.badge{font-size:12px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:#cdd4df;background:#0d1117}
+main{padding:56px 0 90px}.hero{text-align:center}.ey{display:inline-flex;gap:8px;align-items:center;padding:8px 11px;border:1px solid #48212a;border-radius:999px;color:#ffabb5;background:#160b0e;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em}.dot{width:7px;height:7px;background:var(--red);border-radius:50%;box-shadow:0 0 14px var(--red)}h1{font-size:clamp(44px,7vw,82px);letter-spacing:-.06em;line-height:.95;margin:22px 0 18px}h1 span{background:linear-gradient(90deg,#fff 35%,#ff6373);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{max-width:700px;margin:auto;color:var(--muted);font-size:18px;line-height:1.6}
+.box{max-width:900px;margin:36px auto 0;padding:16px;border:1px solid var(--line);border-radius:24px;background:rgba(16,20,28,.92);box-shadow:0 30px 80px rgba(0,0,0,.32)}.row{display:flex;gap:10px}.input{flex:1;min-width:0;height:60px;border-radius:16px;border:1px solid #2a3340;background:#090c11;color:#fff;padding:0 18px;font-size:16px;outline:none}.input:focus{border-color:#76313b;box-shadow:0 0 0 4px #ff304514}.btn{height:60px;border:0;border-radius:16px;padding:0 24px;background:linear-gradient(#ff6878,#ff3045);color:#fff;font-weight:850;cursor:pointer}.btn:disabled{opacity:.55;cursor:not-allowed}.hint{display:flex;justify-content:space-between;color:#727e90;font-size:12px;padding:12px 4px 2px}.result{display:none;margin-top:22px;grid-template-columns:1.25fr .75fr;gap:16px}.result.show{display:grid}.preview,.panel{border:1px solid var(--line);border-radius:20px;background:#0b0e14;overflow:hidden}.preview{min-height:300px;display:grid;place-items:center}.preview img{width:100%;height:auto;display:block}.empty{color:#657286;text-align:center;padding:40px}.panel{padding:20px}.panel h2{margin:0;font-size:21px}.status{margin:15px 0;padding:12px;border-radius:12px;background:#090c12;border:1px solid var(--line);color:#aeb8c8;font-size:13px}.status.ok{color:#c4f1d7;border-color:#1d573a;background:#0a160f}.status.err{color:#ffc8ce;border-color:#5d252d;background:#17090c}.sizes{display:grid;grid-template-columns:1fr 1fr;gap:10px}.size{padding:13px;border:1px solid #29313d;border-radius:13px;background:#12161e;color:#fff;text-align:left;cursor:pointer}.size:hover{border-color:#5b2932;transform:translateY(-1px)}.size b{display:block;font-size:13px}.size span{display:block;margin-top:4px;color:#7d899a;font-size:11px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:54px}.feature{padding:20px;border:1px solid var(--line);border-radius:18px;background:#0d1118}.feature strong{display:block;margin-bottom:7px}.feature p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+.foot{border-top:1px solid var(--line);padding:22px 0;color:#6d788a;font-size:12px}.footin{display:flex;justify-content:space-between;gap:10px}
+@media(max-width:780px){.row{flex-direction:column}.btn{width:100%}.result,.features{grid-template-columns:1fr}.hint,.footin{flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="wrap nav"><div class="brand"><div class="logo"></div><div>ThumbDrop</div></div><div class="badge">Free · No signup</div></header>
+<main class="wrap">
+<section class="hero">
+<div class="ey"><i class="dot"></i>YouTube thumbnail tool</div>
+<h1>Get the thumbnail.<br><span>Keep it crisp.</span></h1>
+<p class="lead">Paste a YouTube video URL, preview available thumbnail resolutions, and download the image you need.</p>
+<div class="box">
+<div class="row"><input id="url" class="input" placeholder="https://www.youtube.com/watch?v=..." inputmode="url" autocomplete="off"><button id="go" class="btn">Get Thumbnail</button></div>
+<div class="hint"><span>youtube.com · youtu.be · Shorts · embeds · live</span><span>Fast & lightweight</span></div>
+</div>
+<section id="result" class="result">
+<div class="preview" id="preview"><div class="empty">Your thumbnail preview will appear here.</div></div>
+<div class="panel">
+<h2>Download sizes</h2>
+<div id="status" class="status">Waiting for a YouTube URL.</div>
+<div class="sizes">
+<button class="size" data-q="maxresdefault"><b>Max Resolution</b><span>1280×720 class • 16:9</span></button>
+<button class="size" data-q="sddefault"><b>SD</b><span>640×480 • 4:3</span></button>
+<button class="size" data-q="hqdefault"><b>High Quality</b><span>480×360 • 4:3</span></button>
+<button class="size" data-q="mqdefault"><b>Medium</b><span>320×180 • 16:9</span></button>
+</div>
+</div>
+</section>
+<div class="features">
+<div class="feature"><strong>⚡ Fast</strong><p>Uses YouTube's image endpoints directly for a simple, low-latency experience.</p></div>
+<div class="feature"><strong>▣ Preview first</strong><p>Check the resolution before saving so you can choose the right version.</p></div>
+<div class="feature"><strong>⌁ No account</strong><p>No signup screen and no framework overhead. Works on desktop and mobile.</p></div>
+</div>
+</section>
+</main>
+<footer class="foot"><div class="wrap footin"><span>ThumbDrop</span><span>Use thumbnails in accordance with applicable rights and YouTube's terms.</span></div></footer>
+<script>
+const $=s=>document.querySelector(s), input=$('#url'), go=$('#go'), result=$('#result'), preview=$('#preview'), status=$('#status'); let id='';
+function parse(v){
+ try{const u=new URL(v.trim()),h=u.hostname.replace(/^www\./,'').toLowerCase(),p=u.pathname.split('/').filter(Boolean);
+ if(h==='youtu.be')return p[0]||'';
+ if(h.endsWith('youtube.com')){if(u.searchParams.get('v'))return u.searchParams.get('v'); const i=['shorts','embed','live','v'].indexOf(p[0]); if(i>=0)return p[i+1]||'';}
+ }catch(e){}
+ return v.trim().match(/^[A-Za-z0-9_-]{11}$/)?.[0]||'';
+}
+function url(q){return 'https://i.ytimg.com/vi/'+encodeURIComponent(id)+'/'+q+'.jpg'}
+function setStatus(t,c=''){status.textContent=t;status.className='status'+(c?' '+c:'')}
+function load(q,download){
+ const src=url(q),img=new Image();setStatus('Checking '+q+'…');
+ img.onload=()=>{preview.innerHTML='';img.alt='YouTube thumbnail preview';preview.appendChild(img);setStatus('Ready — '+img.naturalWidth+'×'+img.naturalHeight,'ok');if(download){const a=document.createElement('a');a.href=src;a.download='youtube-thumbnail-'+id+'-'+q+'.jpg';a.target='_blank';document.body.appendChild(a);a.click();a.remove();}};
+ img.onerror=()=>setStatus('This resolution is not available. Try another size.','err');img.src=src+'?t='+Date.now();
+}
+function extract(){id=parse(input.value);result.classList.add('show');if(!/^[A-Za-z0-9_-]{11}$/.test(id)){preview.innerHTML='<div class="empty">Please enter a valid YouTube video URL.</div>';setStatus('Example: https://www.youtube.com/watch?v=dQw4w9WgXcQ','err');return}load('maxresdefault',false);history.replaceState(null,'',location.pathname+'?v='+id)}
+go.onclick=extract;input.addEventListener('keydown',e=>e.key==='Enter'&&extract());document.querySelectorAll('.size').forEach(b=>b.onclick=()=>{if(!id)return extract();load(b.dataset.q,true)});
+const initial=new URLSearchParams(location.search).get('v');if(initial){input.value='https://youtu.be/'+initial;extract()}
+</script>
+</body></html>
